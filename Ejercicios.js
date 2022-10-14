@@ -107,26 +107,58 @@
 
 //-----Ejercicio 3------
 
- var Trabajador;
- var HorasT;
- let Salario = 0;
- let HorasEx = 0;
+//  var Trabajador;
+//  var HorasT;
+//  let Salario = 0;
+//  let HorasEx = 0;
 
- Trabajador = prompt('Ingrese el numero de trabajadores:','');
+//  Trabajador = prompt('Ingrese el numero de trabajadores:','');
 
- for(let i = 1; i <= Trabajador; i++){
+//  for(let i = 1; i <= Trabajador; i++){
 
- HorasT = prompt('Numero de horas trabajadas','');
+//  HorasT = prompt('Numero de horas trabajadas','');
 
- if(HorasT <= 40){
-     Salario = Number(HorasT) * 20;
- }else{
-     HorasEx = Number(HorasT) - 40;
-     Salario = 40 *20 +(Number(HorasEx)*25);
+//  if(HorasT <= 40){
+//      Salario = Number(HorasT) * 20;
+//  }else{
+//      HorasEx = Number(HorasT) - 40;
+//      Salario = 40 *20 +(Number(HorasEx)*25);
+//  }
+
+//  alert("El salario del trabajador "+i+" es: "+"$"+Salario);
+
+//  }
+
+//-----Ejercicio 4--------
+
+ var Alumnos;
+ var Genero;
+ var Edad;
+ let EdadM = 0;
+ let CantidadM = 0;
+ let PromedioM = 0;
+ let EdadH = 0;
+ let CantidadH = 0;
+ let PromedioH = 0;
+ Alumnos = prompt('Ingrese el numero de estudiantes','');
+
+ for(let i = 0; i < Alumnos; i++){
+     Genero = prompt("Ingrese una opcion de acuerdo el sexo: \n1. Hombre \n2. Mujer",'');
+     Edad = prompt("Ingrese la edad:",'')
+
+     if(Genero == 1){
+         EdadM = Number(EdadM) + Number(Edad);
+         CantidadM = Number(CantidadM) + 1;
+         PromedioM = Number(EdadM)/Number(CantidadM);
+     }else if(Genero == 2){
+         EdadH = Number(EdadH) + Number(Edad);
+         CantidadH = Number(CantidadH) + 1;
+         PromedioH = Number(EdadH)/Number(CantidadH);
+     }
  }
 
- alert("El salario del trabajador "+i+" es: "+"$"+Salario);
-
- }
+ document.write("El promedio de los alumnos es: "+(CantidadH+CantidadM)/Alumnos);
+ document.write("<br>El promedio de edad de los hombres en los alumnos es: "+PromedioM);
+ document.write("<br>El promedio de edad de las mujeres en los alumnos es: "+PromedioM);
 
 

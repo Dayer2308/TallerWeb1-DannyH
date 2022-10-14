@@ -184,26 +184,41 @@
 
 //------Ejercicio 6--------
 
- var integrantes;
- var Peso;
- let totalp = 0;
+//  var integrantes;
+//  var Peso;
+//  let totalp = 0;
 
 
- for(let i = 1;i <= 5; i++){
+//  for(let i = 1;i <= 5; i++){
 
-     integrantes = prompt('ingrese el peso anterior de la persona '+i,'');
+//      integrantes = prompt('ingrese el peso anterior de la persona '+i,'');
 
-     for(let e = 1; e<=10;e++){
-         Peso = prompt('Ingrese el peso de la bascula'+e,'');
-         totalp = totalp + Number(Peso);
-     }
+//      for(let e = 1; e<=10;e++){
+//          Peso = prompt('Ingrese el peso de la bascula'+e,'');
+//          totalp = totalp + Number(Peso);
+//      }
 
-     if((totalp/10)==integrantes){
-         alert("La persona "+i+" mantiene el mismo peso");
-     }else if((totalp/10)>integrantes){
-         alert("La persona "+i+" subio");
-     }else{
-         alert("La persona "+i+" bajo");
-     }
+//      if((totalp/10)==integrantes){
+//          alert("La persona "+i+" mantiene el mismo peso");
+//      }else if((totalp/10)>integrantes){
+//          alert("La persona "+i+" subio");
+//      }else{
+//          alert("La persona "+i+" bajo");
+//      }
 
+//  }
+
+//------Ejercicio 7-------
+
+ var Productos;
+ var Precio;
+ var totalC = 0;
+
+ Productos = prompt('Cantidad de productos comprados','');
+
+ for(let i = 1; i<=Productos; i++){
+     Precio = prompt('Ingrese el precio del producto '+i);
+     totalC = totalC + Number(Precio);
  }
+
+ document.write("El total de la compra es: $"+totalC);

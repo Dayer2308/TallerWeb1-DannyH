@@ -163,23 +163,47 @@
 
 //-----Ejercicio 5-------
 
- var CantidadN;
- var Numero;
- let Numerom = 0;
+//  var CantidadN;
+//  var Numero;
+//  let Numerom = 0;
 
- CantidadN = prompt('Ingrese la cantidad de numeros a calcular','');
+//  CantidadN = prompt('Ingrese la cantidad de numeros a calcular','');
 
- for(let i = 1; i <= CantidadN; i++){
-     Numero = prompt('Ingrese un numero','');
+//  for(let i = 1; i <= CantidadN; i++){
+//      Numero = prompt('Ingrese un numero','');
 
-     if(i == 1){
-         Numerom = Numero;
-     }else if(i < Numerom){
-         Numerom = Numero;
+//      if(i == 1){
+//          Numerom = Numero;
+//      }else if(i < Numerom){
+//          Numerom = Numero;
+//      }
+
+//  }
+
+//  document.write("El numero menor es: "+Numerom);
+
+//------Ejercicio 6--------
+
+ var integrantes;
+ var Peso;
+ let totalp = 0;
+
+
+ for(let i = 1;i <= 5; i++){
+
+     integrantes = prompt('ingrese el peso anterior de la persona '+i,'');
+
+     for(let e = 1; e<=10;e++){
+         Peso = prompt('Ingrese el peso de la bascula'+e,'');
+         totalp = totalp + Number(Peso);
+     }
+
+     if((totalp/10)==integrantes){
+         alert("La persona "+i+" mantiene el mismo peso");
+     }else if((totalp/10)>integrantes){
+         alert("La persona "+i+" subio");
+     }else{
+         alert("La persona "+i+" bajo");
      }
 
  }
-
- document.write("El numero menor es: "+Numerom);
-
-

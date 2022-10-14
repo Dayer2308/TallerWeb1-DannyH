@@ -225,52 +225,84 @@
 
 //---------Ejercicio 8--------
 
-var ClienteB;
-var ValorB;
-var EdadC;
-var opcion;
-let Descuento = 0;
-let totalP = 0;
-let Catg1 = 0;
-let Catg2 = 0;
-let Catg3 = 0;
-let Catg4 = 0;
-let Catg5 = 0;
+// var ClienteB;
+// var ValorB;
+// var EdadC;
+// var opcion;
+// let Descuento = 0;
+// let totalP = 0;
+// let Catg1 = 0;
+// let Catg2 = 0;
+// let Catg3 = 0;
+// let Catg4 = 0;
+// let Catg5 = 0;
 
-ClienteB = prompt('Ingrese el numero de cliente','');
-ValorB = prompt('Ingrese el valor de la boleta','');
+// ClienteB = prompt('Ingrese el numero de cliente','');
+// ValorB = prompt('Ingrese el valor de la boleta','');
 
-for(let i=1;i <=ClienteB;i++){
+// for(let i=1;i <=ClienteB;i++){
 
-    EdadC = prompt('Ingrese la edad','');
+//     EdadC = prompt('Ingrese la edad','');
 
-    if(Number(EdadC) < 5){
-        alert("No se permiten menores de 5 años");
-    }else if(Number(EdadC) <= 14){
-        Descuento = Number(ValorB)* 0.35;
-        Catg1 = Catg1 + Descuento;
-    }else if(Number(EdadC) <= 19){
-        Descuento = Number(ValorB)* 0.25;
-        Catg2 = Catg2 + Descuento;
-    }else if(Number(EdadC) <= 45){
-        Descuento = Number(ValorB)* 0.10;
-        Catg3 = Catg3 + Descuento;
-    }else if(Number(EdadC) <= 65){
-        Descuento = Number(ValorB)* 0.25;
-        Catg4 = Catg4 + Descuento;
+//     if(Number(EdadC) < 5){
+//         alert("No se permiten menores de 5 años");
+//     }else if(Number(EdadC) <= 14){
+//         Descuento = Number(ValorB)* 0.35;
+//         Catg1 = Catg1 + Descuento;
+//     }else if(Number(EdadC) <= 19){
+//         Descuento = Number(ValorB)* 0.25;
+//         Catg2 = Catg2 + Descuento;
+//     }else if(Number(EdadC) <= 45){
+//         Descuento = Number(ValorB)* 0.10;
+//         Catg3 = Catg3 + Descuento;
+//     }else if(Number(EdadC) <= 65){
+//         Descuento = Number(ValorB)* 0.25;
+//         Catg4 = Catg4 + Descuento;
+//     }else{
+//         Descuento = Number(ValorB)* 0.35;
+//         Catg5 = Catg5 + Descuento;
+//     }
+
+//     alert("El descuento aplicado es: $"+Descuento);
+//     totalP = totalP + Descuento;
+
+// }
+
+// document.write("<br>El total descuento de la categoria 1 es de: $"+Catg1);
+// document.write("<br>El total descuento de la categoria 2 es de: $"+Catg2);
+// document.write("<br>El total descuento de la categoria 3 es de: $"+Catg3);
+// document.write("<br>El total descuento de la categoria 4 es de: $"+Catg4);
+// document.write("<br>El total descuento de la categoria 5 es de: $"+Catg5);
+// document.write("<br>El descuento total es: $"+totalP);
+
+//-----Ejercicio 9------
+
+var VendedoresA;
+var VentaA;
+let Comision = 0;
+let VentaT = 0;
+
+VendedoresA = prompt('Ingresa el numero de vendedores','');
+
+for(let i = 1; i <= VendedoresA; i++){
+
+    VentaA = prompt('Ingresa el valor de la venta del vendedor ' + i,'');
+
+    if(Number(VentaA) <= 20000000){
+        Comision= Number(VentaA)*0.1;
+    }else if(Number(VentaA) > 20000000 && Number(VentaA) < 40000000){
+        Comision= Number(VentaA)*0.15;
+    }else if(Number(VentaA) >= 40000000 && Number(VentaA) < 80000000){
+        Comision= Number(VentaA)*0.2;
+    }else if(Number(VentaA) >= 80000000 && Number(VentaA) < 160000000){
+        Comision= Number(VentaA)*0.25;
     }else{
-        Descuento = Number(ValorB)* 0.35;
-        Catg5 = Catg5 + Descuento;
+        Comision= Number(VentaA)*0.3;
     }
 
-    alert("El descuento aplicado es: $"+Descuento);
-    totalP = totalP + Descuento;
+    alert("La comision del vendedor "+i+" es: $"+Comision);
+    VentaT = VentaT + Number(VentaA);
 
 }
 
-document.write("<br>El total descuento de la categoria 1 es de: $"+Catg1);
-document.write("<br>El total descuento de la categoria 2 es de: $"+Catg2);
-document.write("<br>El total descuento de la categoria 3 es de: $"+Catg3);
-document.write("<br>El total descuento de la categoria 4 es de: $"+Catg4);
-document.write("<br>El total descuento de la categoria 5 es de: $"+Catg5);
-document.write("<br>El descuento total es: $"+totalP);
+document.write("La venta total de kia es: $"+ VentaT);

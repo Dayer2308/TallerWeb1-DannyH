@@ -372,31 +372,45 @@
 
 //------Ejercicio 14---------
 
-var Num1;
-var Num2;
-let a=0;
-let b=0;
-let TotalV=0;
+// var Num1;
+// var Num2;
+// let a=0;
+// let b=0;
+// let TotalV=0;
 
-Num1 = prompt('Ingrese un numero','');
-Num2 = prompt('Ingrese un numero','');
+// Num1 = prompt('Ingrese un numero','');
+// Num2 = prompt('Ingrese un numero','');
 
-if(Number(Num1)>Number(Num2)){
+// if(Number(Num1)>Number(Num2)){
 
-    a = Num1;
-    b = Num2;
+//     a = Num1;
+//     b = Num2;
 
-}else{
-    a = Num2;
-    b = Num1;
-}
+// }else{
+//     a = Num2;
+//     b = Num1;
+// }
 
-while(b != 0){
+// while(b != 0){
 
-    TotalV = b;
-    b = a % b;
-    a = TotalV;
+//     TotalV = b;
+//     b = a % b;
+//     a = TotalV;
 
-}
+// }
 
-document.write("El Maximo Comun Divisor entre "+Num1+" Y "+Num2+" es:"+TotalV);
+// document.write("El Maximo Comun Divisor entre "+Num1+" Y "+Num2+" es:"+TotalV);
+
+//------Ejercicio 15---------
+    
+    let c = 0;
+    let d = 0;
+    let a= 25000000.0;
+    let b = 19900000.0;
+    while (b<a){
+        a = a+(a * 0.2);
+        b = b+(b * 0.3);
+        c++;
+    }
+    d=1994+c;
+    document.writeln("La poblacion del pais B supera a la del pais A en el año:"+d)

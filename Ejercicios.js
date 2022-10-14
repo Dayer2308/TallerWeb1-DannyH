@@ -309,40 +309,63 @@
 
 //------Ejercicio 10----------
 
-let Cand1 = 0;
-let Cand2 = 0;
-let Cand3 = 0;
+// let Cand1 = 0;
+// let Cand2 = 0;
+// let Cand3 = 0;
+// var Voto = getRandomInt();
 
-for(let i = 1; i <= 50000; i++){
+// for(let i = 0; i <= 50000; i++){
 
-    var Voto = Math.random();
+//     if(Voto == 1){
+//         Cand1 = Cand1 + 1;
+//     }else if(Voto == 2){
+//         Cand2 = Cand2 + 1;
+//     }else if(Vot0 == 3){
+//         Cand3 = Cand3 + 1
+//     }
 
-    if(Voto == 1){
-        Cand1 = Number(Cand1) + 1;
-    }else if(Voto == 2){
-        Cand2 = Number(Cand2) + 1;
-    }else if(Vot0 == 3){
-        Cand3 = Number(Cand3) + 1
+// }
+
+// document.write("El candidato 1 tiene de votos: "+Cand1);
+// document.write("El candidato 2 tiene de votos: "+Cand2);
+// document.write("El candidato 3 tiene de votos: "+Cand3);
+
+// if(Cand1 == Cand2 && Cand1 == Cand3 && Cand2 == Cand3){
+//     document.write("Los tres candidatos tienen la misma cantidad de votos");
+// }else if(Cand1 == Cand2 && Cand1 > Cand3){
+//     document.write("Los candidatos 1 y 2 tienen la misma cantidad de votos");
+// }else if(Cand1 == Cand3 && Cand1 > Cand2){
+//     document.write("Los candidatos 1 y 3 tienen la misma cantidad de votos");
+// }else if(Cand2 == Cand3 && Cand2 > Cand1){
+//     document.write("Los candidatos 2 y 3 tienen la misma cantidad de votos");
+// }else if(Cand1 > Cand2 && Cand1 > Cand3){
+//     document.write("Los candidatos 1 es el ganador");
+// }else if(Cand2 > Cand1 && Cand2 > Cand3){
+//     document.write("Los candidatos 2 es el ganador");
+// }else{
+//     document.write("Los candidatos 3 es el ganador");
+// }
+
+//------Ejercicio 11---------
+
+let numero = 1;
+let contador = 0;
+let x = 0; 
+
+for(numero; numero <= 100; numero++){
+
+i = 1;
+
+    while(i <= numero){
+
+        if(numero % i == 0){
+            contador = contador + 1;
+        }
+        i = i +1;
     }
 
-}
+    if(contador == 2){
+       document.write("El numero "+numero+ "es primo");
+    }
 
-document.write("El candidato 1 tiene de votos: "+Cand1);
-document.write("El candidato 2 tiene de votos: "+Cand2);
-document.write("El candidato 3 tiene de votos: "+Cand3);
-
-if(Cand1 == Cand2 && Cand1 == Cand3 && Cand2 == Cand3){
-    document.write("Los tres candidatos tienen la misma cantidad de votos");
-}else if(Cand1 == Cand2 && Cand1 > Cand3){
-    document.write("Los candidatos 1 y 2 tienen la misma cantidad de votos");
-}else if(Cand1 == Cand3 && Cand1 > Cand2){
-    document.write("Los candidatos 1 y 3 tienen la misma cantidad de votos");
-}else if(Cand2 == Cand3 && Cand2 > Cand1){
-    document.write("Los candidatos 2 y 3 tienen la misma cantidad de votos");
-}else if(Cand1 > Cand2 && Cand1 > Cand3){
-    document.write("Los candidatos 1 es el ganador");
-}else if(Cand2 > Cand1 && Cand2 > Cand3){
-    document.write("Los candidatos 2 es el ganador");
-}else{
-    document.write("Los candidatos 3 es el ganador");
 }

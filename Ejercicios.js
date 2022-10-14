@@ -277,32 +277,72 @@
 
 //-----Ejercicio 9------
 
-var VendedoresA;
-var VentaA;
-let Comision = 0;
-let VentaT = 0;
+// var VendedoresA;
+// var VentaA;
+// let Comision = 0;
+// let VentaT = 0;
 
-VendedoresA = prompt('Ingresa el numero de vendedores','');
+// VendedoresA = prompt('Ingresa el numero de vendedores','');
 
-for(let i = 1; i <= VendedoresA; i++){
+// for(let i = 1; i <= VendedoresA; i++){
 
-    VentaA = prompt('Ingresa el valor de la venta del vendedor ' + i,'');
+//     VentaA = prompt('Ingresa el valor de la venta del vendedor ' + i,'');
 
-    if(Number(VentaA) <= 20000000){
-        Comision= Number(VentaA)*0.1;
-    }else if(Number(VentaA) > 20000000 && Number(VentaA) < 40000000){
-        Comision= Number(VentaA)*0.15;
-    }else if(Number(VentaA) >= 40000000 && Number(VentaA) < 80000000){
-        Comision= Number(VentaA)*0.2;
-    }else if(Number(VentaA) >= 80000000 && Number(VentaA) < 160000000){
-        Comision= Number(VentaA)*0.25;
-    }else{
-        Comision= Number(VentaA)*0.3;
+//     if(Number(VentaA) <= 20000000){
+//         Comision= Number(VentaA)*0.1;
+//     }else if(Number(VentaA) > 20000000 && Number(VentaA) < 40000000){
+//         Comision= Number(VentaA)*0.15;
+//     }else if(Number(VentaA) >= 40000000 && Number(VentaA) < 80000000){
+//         Comision= Number(VentaA)*0.2;
+//     }else if(Number(VentaA) >= 80000000 && Number(VentaA) < 160000000){
+//         Comision= Number(VentaA)*0.25;
+//     }else{
+//         Comision= Number(VentaA)*0.3;
+//     }
+
+//     alert("La comision del vendedor "+i+" es: $"+Comision);
+//     VentaT = VentaT + Number(VentaA);
+
+// }
+
+// document.write("La venta total de kia es: $"+ VentaT);
+
+//------Ejercicio 10----------
+
+let Cand1 = 0;
+let Cand2 = 0;
+let Cand3 = 0;
+
+for(let i = 1; i <= 50000; i++){
+
+    var Voto = Math.random();
+
+    if(Voto == 1){
+        Cand1 = Number(Cand1) + 1;
+    }else if(Voto == 2){
+        Cand2 = Number(Cand2) + 1;
+    }else if(Vot0 == 3){
+        Cand3 = Number(Cand3) + 1
     }
-
-    alert("La comision del vendedor "+i+" es: $"+Comision);
-    VentaT = VentaT + Number(VentaA);
 
 }
 
-document.write("La venta total de kia es: $"+ VentaT);
+document.write("El candidato 1 tiene de votos: "+Cand1);
+document.write("El candidato 2 tiene de votos: "+Cand2);
+document.write("El candidato 3 tiene de votos: "+Cand3);
+
+if(Cand1 == Cand2 && Cand1 == Cand3 && Cand2 == Cand3){
+    document.write("Los tres candidatos tienen la misma cantidad de votos");
+}else if(Cand1 == Cand2 && Cand1 > Cand3){
+    document.write("Los candidatos 1 y 2 tienen la misma cantidad de votos");
+}else if(Cand1 == Cand3 && Cand1 > Cand2){
+    document.write("Los candidatos 1 y 3 tienen la misma cantidad de votos");
+}else if(Cand2 == Cand3 && Cand2 > Cand1){
+    document.write("Los candidatos 2 y 3 tienen la misma cantidad de votos");
+}else if(Cand1 > Cand2 && Cand1 > Cand3){
+    document.write("Los candidatos 1 es el ganador");
+}else if(Cand2 > Cand1 && Cand2 > Cand3){
+    document.write("Los candidatos 2 es el ganador");
+}else{
+    document.write("Los candidatos 3 es el ganador");
+}

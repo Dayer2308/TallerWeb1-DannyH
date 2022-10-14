@@ -43,65 +43,90 @@
 
 //-------Ejercicio 2------
 
- var opcion;
- var edad;
- var total = 0;
- let cat1 = 0;
- let cat2 = 0;
- let cat3 = 0;
- let llave = null;
- let animal = "";
+//  var opcion;
+//  var edad;
+//  var total = 0;
+//  let cat1 = 0;
+//  let cat2 = 0;
+//  let cat3 = 0;
+//  let llave = null;
+//  let animal = "";
 
 
- opcion = prompt('Ingrese una opcion: \n1. Elefantes \n2. Jirafas \n3. Chimpances','');
+//  opcion = prompt('Ingrese una opcion: \n1. Elefantes \n2. Jirafas \n3. Chimpances','');
 
- switch(opcion){
+//  switch(opcion){
 
-     case "1":
-      total = 20;
-      animal = "Elefante";
-      llave = true;
-     break;
+//      case "1":
+//       total = 20;
+//       animal = "Elefante";
+//       llave = true;
+//      break;
     
-     case "2":
-      total = 15;
-      animal = "Jirafa";
-      llave = true;
-     break;
+//      case "2":
+//       total = 15;
+//       animal = "Jirafa";
+//       llave = true;
+//      break;
 
-     case "3":
-      total = 40;
-      animal = "Chimpace";
-      llave = true;
-     break;
+//      case "3":
+//       total = 40;
+//       animal = "Chimpace";
+//       llave = true;
+//      break;
 
-     default:
-     alert("Ingrese una opcion valida");
-     break;
- }
+//      default:
+//      alert("Ingrese una opcion valida");
+//      break;
+//  }
 
- if(llave == true){
+//  if(llave == true){
 
- for(let i = 1; i <= total ; i++){
+//  for(let i = 1; i <= total ; i++){
 
-     edad = prompt('Ingrese la edad '+i+":",'');
+//      edad = prompt('Ingrese la edad '+i+":",'');
 
-     if(edad >= 1 && edad <= 1){
-         cat1 = cat1 + 1;
-     }else if(edad < 3){
-         cat2 = cat2 + 1;
-     }else{
-         cat3 = cat3 + 1;
-     }
- }
+//      if(edad >= 1 && edad <= 1){
+//          cat1 = cat1 + 1;
+//      }else if(edad < 3){
+//          cat2 = cat2 + 1;
+//      }else{
+//          cat3 = cat3 + 1;
+//      }
+//  }
 
- document.write("<br>El porcentaje de edad del animal "+animal+" es:");
- document.write("<br>De 0 a 1 año es: "+(cat1/total)*100+"%");
- document.write("<br>De mas de 1 año y menos de 3 es: "+(cat2/total)*100+"%");
- document.write("<br>De 3 o mas años es: "+(cat3/total)*100+"%");
+//  document.write("<br>El porcentaje de edad del animal "+animal+" es:");
+//  document.write("<br>De 0 a 1 año es: "+(cat1/total)*100+"%");
+//  document.write("<br>De mas de 1 año y menos de 3 es: "+(cat2/total)*100+"%");
+//  document.write("<br>De 3 o mas años es: "+(cat3/total)*100+"%");
 
+//  }else{
+
+//  document.write('Las opciones son 1 a 3, recargue la pagina');    
+// }
+
+//-----Ejercicio 3------
+
+ var Trabajador;
+ var HorasT;
+ let Salario = 0;
+ let HorasEx = 0;
+
+ Trabajador = prompt('Ingrese el numero de trabajadores:','');
+
+ for(let i = 1; i <= Trabajador; i++){
+
+ HorasT = prompt('Numero de horas trabajadas','');
+
+ if(HorasT <= 40){
+     Salario = Number(HorasT) * 20;
  }else{
+     HorasEx = Number(HorasT) - 40;
+     Salario = 40 *20 +(Number(HorasEx)*25);
+ }
 
- document.write('Las opciones son 1 a 3, recargue la pagina');    
-}
+ alert("El salario del trabajador "+i+" es: "+"$"+Salario);
+
+ }
+
 

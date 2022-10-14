@@ -131,34 +131,55 @@
 
 //-----Ejercicio 4--------
 
- var Alumnos;
- var Genero;
- var Edad;
- let EdadM = 0;
- let CantidadM = 0;
- let PromedioM = 0;
- let EdadH = 0;
- let CantidadH = 0;
- let PromedioH = 0;
- Alumnos = prompt('Ingrese el numero de estudiantes','');
+//  var Alumnos;
+//  var Genero;
+//  var Edad;
+//  let EdadM = 0;
+//  let CantidadM = 0;
+//  let PromedioM = 0;
+//  let EdadH = 0;
+//  let CantidadH = 0;
+//  let PromedioH = 0;
+//  Alumnos = prompt('Ingrese el numero de estudiantes','');
 
- for(let i = 0; i < Alumnos; i++){
-     Genero = prompt("Ingrese una opcion de acuerdo el sexo: \n1. Hombre \n2. Mujer",'');
-     Edad = prompt("Ingrese la edad:",'')
+//  for(let i = 0; i < Alumnos; i++){
+//      Genero = prompt("Ingrese una opcion de acuerdo el sexo: \n1. Hombre \n2. Mujer",'');
+//      Edad = prompt("Ingrese la edad:",'')
 
-     if(Genero == 1){
-         EdadM = Number(EdadM) + Number(Edad);
-         CantidadM = Number(CantidadM) + 1;
-         PromedioM = Number(EdadM)/Number(CantidadM);
-     }else if(Genero == 2){
-         EdadH = Number(EdadH) + Number(Edad);
-         CantidadH = Number(CantidadH) + 1;
-         PromedioH = Number(EdadH)/Number(CantidadH);
+//      if(Genero == 1){
+//          EdadM = Number(EdadM) + Number(Edad);
+//          CantidadM = Number(CantidadM) + 1;
+//          PromedioM = Number(EdadM)/Number(CantidadM);
+//      }else if(Genero == 2){
+//          EdadH = Number(EdadH) + Number(Edad);
+//          CantidadH = Number(CantidadH) + 1;
+//          PromedioH = Number(EdadH)/Number(CantidadH);
+//      }
+//  }
+
+//  document.write("El promedio de los alumnos es: "+(CantidadH+CantidadM)/Alumnos);
+//  document.write("<br>El promedio de edad de los hombres en los alumnos es: "+PromedioM);
+//  document.write("<br>El promedio de edad de las mujeres en los alumnos es: "+PromedioM);
+
+//-----Ejercicio 5-------
+
+ var CantidadN;
+ var Numero;
+ let Numerom = 0;
+
+ CantidadN = prompt('Ingrese la cantidad de numeros a calcular','');
+
+ for(let i = 1; i <= CantidadN; i++){
+     Numero = prompt('Ingrese un numero','');
+
+     if(i == 1){
+         Numerom = Numero;
+     }else if(i < Numerom){
+         Numerom = Numero;
      }
+
  }
 
- document.write("El promedio de los alumnos es: "+(CantidadH+CantidadM)/Alumnos);
- document.write("<br>El promedio de edad de los hombres en los alumnos es: "+PromedioM);
- document.write("<br>El promedio de edad de las mujeres en los alumnos es: "+PromedioM);
+ document.write("El numero menor es: "+Numerom);
 
 

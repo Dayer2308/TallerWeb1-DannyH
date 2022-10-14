@@ -348,24 +348,55 @@
 
 //------Ejercicio 11---------
 
-let numero = 1;
-let contador = 0;
-let x = 0; 
+// let numero = 1;
+// let contador = 0;
+// let x = 0; 
 
-for(numero; numero <= 100; numero++){
+// for(numero; numero <= 100; numero++){
 
-i = 1;
+// i = 1;
 
-    while(i <= numero){
+//     while(i <= numero){
 
-        if(numero % i == 0){
-            contador = contador + 1;
-        }
-        i = i +1;
-    }
+//         if(numero % i == 0){
+//             contador = contador + 1;
+//         }
+//         i = i +1;
+//     }
 
-    if(contador == 2){
-       document.write("El numero "+numero+ "es primo");
-    }
+//     if(contador == 2){
+//        document.write("El numero "+numero+ "es primo");
+//     }
+
+// }
+
+//------Ejercicio 14---------
+
+var Num1;
+var Num2;
+let a=0;
+let b=0;
+let TotalV=0;
+
+Num1 = prompt('Ingrese un numero','');
+Num2 = prompt('Ingrese un numero','');
+
+if(Number(Num1)>Number(Num2)){
+
+    a = Num1;
+    b = Num2;
+
+}else{
+    a = Num2;
+    b = Num1;
+}
+
+while(b != 0){
+
+    TotalV = b;
+    b = a % b;
+    a = TotalV;
 
 }
+
+document.write("El Maximo Comun Divisor entre "+Num1+" Y "+Num2+" es:"+TotalV);
